@@ -1,23 +1,15 @@
-var Greeter = (function () {
-    function Greeter(element) {
-        this.element = element;
-        this.element.innerHTML += "The time is: ";
-        this.span = document.createElement('span');
-        this.element.appendChild(this.span);
-        this.span.innerText = new Date().toUTCString();
+function display(x) {
+    var str = "";
+    for (var j = 1; j < x + 1; j++) {
+        str = "";
+        for (var k = 1; k <= x - j; k++) {
+            str += " ";
+        }
+        for (var k = x - j + 1; k <= x + j - 1; k++) {
+            str += "*";
+        }
+        console.log(str);
     }
-    Greeter.prototype.start = function () {
-        var _this = this;
-        this.timerToken = setInterval(function () { return _this.span.innerHTML = new Date().toUTCString(); }, 500);
-    };
-    Greeter.prototype.stop = function () {
-        clearTimeout(this.timerToken);
-    };
-    return Greeter;
-}());
-window.onload = function () {
-    var el = document.getElementById('content');
-    var greeter = new Greeter(el);
-    greeter.start();
-};
+}
+display(3);
 //# sourceMappingURL=main.js.map
