@@ -11,5 +11,6 @@ function display(x) {
         console.log(str);
     }
 }
-display(3);
+var line = 3;
+display(line);
 //# sourceMappingURL=main.js.map

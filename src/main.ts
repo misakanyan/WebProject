@@ -12,5 +12,5 @@ function display(x:number):void {
             console.log(str);
         }
 }
-
-display(3);
+var line:number = 3;
+display(line);
